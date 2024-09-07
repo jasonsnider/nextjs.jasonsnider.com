@@ -20,3 +20,9 @@ Enter the container
 ```sh
 docker exec -it $(docker ps | grep 'next' | tr ' ' '\n' | tail -1) sh
 ```
+
+Linting with eslint and prettier, from the container run
+```sh
+npm run lint
+npm run lint -- --fix
+```

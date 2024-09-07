@@ -2,100 +2,111 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
+    <main className="w-[960px] max-w-[90%] mt-[60px] mx-auto">
+      <section id="About">
+        <h2 className="text-5xl mt-8 mb-8">Hello, I&apos;m Jason Snider</h2>
+        <p>
+          <Image
+            className="rounded-full float-left pr-8"
+            alt="Jason Snider's Avatar"
+            src="/img/b449cfaa4cab48910ad8c0d9fdb812d0-128.jpg"
+            width={128}
+            height={128}
+          />
+          Jason Snider is a full stack web and hybrid mobile application
+          developer, indie game dev, dev bootcamp instructor, systems architect,
+          Linux aficionado, open source advocate, impromptu DBA, security and
+          blockchain enthusiast with a sincere passion for building and
+          advancing knowledge while resolving complex problems and business
+          challenges through technical innovation.
+        </p>
+      </section>
+      <section id="Projects">
+        <h2 className="text-5xl mt-8 mb-8">Things and Stuff</h2>
+        <p>A high level overview of the things I build and the stuff I do.</p>
+        <h3 className="text-4xl mt-8 mb-8">Back Office</h3>
+        <p>
+          Extensive experience in designing and developing event, geo, and data
+          driven CRM, CMS, ERP, BI, IO, and other miscellaneous back office
+          systems.
+        </p>
+        <h3 className="text-4xl mt-8 mb-8">Frontend Development</h3>
+        <p>
+          Extensive experience with a number of front end technologies including
+          but not limited to HTML5, CSS3, JavaScript, jQuery, Angular, Ionic,
+          Rxjs, Gulp, webpack Less, Sass, Material Design, Bootstrap, Vanilla
+          JS, Ajax, API consumption.
+        </p>
+        <h3 className="text-4xl mt-8 mb-8">Backend Development</h3>
+        <p>
+          Extensive experience with a number of front end technologies including
+          but not limited to Linux, Apache, MySQL, MongoDB, Postgre, PHP,
+          Python, BASH, NodeJS, Express, CakePHP, API development.
+        </p>
+        <h3 className="text-4xl mt-8 mb-8">
+          Mobile and Indie Game Development
+        </h3>
+        <p>
+          Experience building building progressive web and hybrid mobile
+          applications that are inclusive of indie gamesand general data
+          management. Experience publishing to Google Play and Apple App store.
+        </p>
+        <h3 className="text-4xl mt-8 mb-8">Portal Development</h3>
+        <p>
+          Experience in designing and developing portal driven monolithic
+          systems. These systems provide a primary personal branding and career
+          coaching platform that provides portals for students, instructors,
+          administration, and white labeling for third party organizations.
+        </p>
+        <h3 className="text-4xl mt-8 mb-8">Social Media</h3>
+        <p>
+          Experience in designing and developing social media platforms as well
+          as integrating social features into existing platforms for which
+          social aspects are not the primary concern of the system.
+        </p>
+        <h3 className="text-4xl mt-8 mb-8">Systems Architect</h3>
+        <p>
+          Experience designing and implementing the overall technical
+          architecture for a number of cloud based systems.
+        </p>
+        <h3 className="text-4xl mt-8 mb-8">Open Source</h3>
+        <p>Has contributed to and released a number of open source projects.</p>
+        <h3 className="text-4xl mt-8 mb-8">Security</h3>
+        <p>
+          Security enthusiast and hobbyist. In additional to concentrating my
+          graduate work on InfoSec, I have listened to nearly every episode of
+          Security Now and strive to design and build secure solutions.
+        </p>
+        <h3 className="text-4xl mt-8 mb-8">Instructor, Mentor and Leader</h3>
+        <p>
+          Experience designing and teaching development bootcamps, mentoring
+          junior developers, and leading development teams and efforts.
+        </p>
+        <br />
+        <br />
+        <div className="text-center">
+          <a className="btn" href="resume">
+            Resume
           </a>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+      </section>
+      <section id="SocialMedia">
+        <a href="https://www.linkedin.com/in/jdsnider">
+          <i className="fab fa-linkedin">
+            <span className="sr-only">LinkedIn</span>
+          </i>
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+        <a href="https://github.com/jasonsnider">
+          <i className="fab fa-github">
+            <span className="sr-only">GitHub</span>
+          </i>
         </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+        <a href="https://twitter.com/jason_snider">
+          <i className="fab fa-twitter">
+            <span className="sr-only">Twitter</span>
+          </i>
         </a>
-      </footer>
-    </div>
+      </section>
+    </main>
   );
 }
