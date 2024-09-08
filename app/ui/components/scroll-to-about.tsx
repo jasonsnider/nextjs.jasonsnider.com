@@ -19,7 +19,7 @@ export default function ScrollToAbout({ link, href, classDef }: NavBarProps) {
     if (element) {
       const rect = element.getBoundingClientRect();
       window.scrollTo({
-        top: rect.top + window.pageYOffset - 60,
+        top: rect.top + window.scrollY - 80,
         behavior: "smooth",
       });
     }

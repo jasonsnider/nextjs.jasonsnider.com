@@ -1,9 +1,11 @@
 "use client";
 import { useState } from "react";
-import { Bars3Icon, CodeBracketIcon } from "@heroicons/react/24/outline";
+import { Bars3Icon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import clsx from "clsx";
 import ScrollToAbout from "./scroll-to-about";
+import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,6 +13,8 @@ export default function NavBar() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const pathname = usePathname();
 
   const links = [
     {
@@ -22,22 +26,22 @@ export default function NavBar() {
     {
       id: 2,
       link: "blog",
-      href: "#",
+      href: "/articles",
     },
     {
       id: 3,
       link: "games",
-      href: "#",
+      href: "/games",
     },
     {
       id: 4,
       link: "tools",
-      href: "#",
+      href: "/tools",
     },
     {
       id: 5,
       link: "contact",
-      href: "#",
+      href: "/contact",
     },
   ];
 
@@ -46,9 +50,16 @@ export default function NavBar() {
       id="MainNav"
       className="fixed top-0 right-0 left-0 z-[10000] text-white bg-[rgba(30,30,30,0.5)] pl-2 pt-3 pr-2 pb-3 md:flex md:justify-between md:items-center"
     >
-      <a className="text-xl" href="/">
-        <div className="text-xl inline">
-          <CodeBracketIcon className="w-8 h-8 inline" /> Jason Snider
+      <a href="/">
+        <div className="text-[32px] inline">
+          <Image
+            src="/img/logo.png"
+            alt="Jason Snider"
+            width={32}
+            height={32}
+            className="inline"
+          />{" "}
+          Jason Snider
         </div>
       </a>
       <button onClick={toggleMenu} className="text-white float-right md:hidden">
@@ -65,7 +76,7 @@ export default function NavBar() {
       >
         {links.map(({ id, link, href, handler }) => (
           <li key={id} className="inline">
-            {handler === "handleScrollAndUpdateHash" ? (
+            {handler === "handleScrollAndUpdateHash" && pathname === "/" ? (
               <ScrollToAbout
                 link={link}
                 href={href}
