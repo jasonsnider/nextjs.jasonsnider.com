@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic";
 
 export async function findArticles(): Promise<Article[]> {
   try {
-    const data = await pool.query("SELECT * FROM articles WHERE type='post' AND published<=NOW() ORDER BY published DESC");
+    const data = await pool.query("SELECT * FROM articles WHERE type='post' ORDER BY published DESC");
     return data.rows;
   } catch (error) {
     console.error("Database Error:", error);
